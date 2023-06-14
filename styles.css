@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:ital,wght@0,400;0,800;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:ital,wght@0,400;0,600;0,800;1,300;1,400&display=swap");
 :root {
   --background-color: #eee;
+  --pricingBackground-color: #ddd;
   --text-color: #000;
+  --button-color: #f1c40f;
+  --icon-color: darkorange;
 }
 
 * {
@@ -21,19 +24,23 @@ body {
 }
 
 #header {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 0 20px;
   width: 100%;
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background-color);
 }
 
 #nav-bar ul {
   width: 35vw;
   display: flex;
   justify-content: space-around;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #nav-bar li {
@@ -47,5 +54,183 @@ body {
 }
 
 #header-img {
-  width: 400px;
+  width: 300px;
+}
+
+#main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 75px auto 0;
+  padding: 20px;
+}
+
+/* Hero */
+#hero {
+  margin: 20px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hero h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero input {
+  display: block;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 150px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border: none;
+  border-radius: 0.2em;
+  background-color: var(--button-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Features */
+#features {
+  margin: 30px;
+}
+.text-blcok {
+  display: flex;
+  align-items: center;
+  height: 125px;
+}
+
+#icon {
+  width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+  font-size: 4rem;
+}
+
+.text h2 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.text p {
+  font-size: 1.2rem;
+}
+
+/* How It Works */
+#how_it_works {
+  margin: 50px 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pricing */
+#pricing {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.pricing_block {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing_block div:first-child {
+  width: 100%;
+  height: 50px;
+  background-color: var(--pricingBackground-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing_block h3 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.pricing_block p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.pricing_block .button {
+  margin-top: 30px;
+}
+
+/* Footer */
+
+#footer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ddd;
+}
+
+#footer div {
+  width: 220px;
+}
+
+#footer ul {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#footer ul li {
+  list-style-type: none;
+}
+
+#footer ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#footer p {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+@media (max-width: 1000px) {
+  #pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  #header-img {
+    width: 200px;
+  }
+
+  #pricing {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
